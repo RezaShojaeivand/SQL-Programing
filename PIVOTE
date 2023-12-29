@@ -1,0 +1,8 @@
+How to convert raw data to columns in SQL:
+
+SELECT * FROM (
+SELECT column1, column2 FROM schema_name.table_name )
+PIVOT (
+Aggregatin_function(column2) FOR column2 IN (value1 as col1 ,value2 as col2)
+)
+ORDER BY column1;
